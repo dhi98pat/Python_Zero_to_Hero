@@ -23,12 +23,30 @@
 ######################################
 
 
-#Creating the function
-def get_user_name():
-    name = input("What is your name? ")
-    print("Hello, " + name)
-    # Inside the function
+# #Creating the function
+# def get_user_name():
+#     name = input("What is your name? ")
+#     print("Hello, " + name)
+#     # Inside the function
+#
+# #Outside the function
+# print("Hello")
+# get_user_name() # Calling the function
 
-#Outside the function
-print("Hello")
-get_user_name() # Calling the function
+#################################################
+
+
+# def my_function():
+#     if sky == "clear":
+#         print("blue")
+#     elif sky == "cloudy":
+#         print("greay")
+#       print("Hello")
+# print("World")
+
+##############################################
+
+
+## While Loop ()
+#while something_is_true:
+    #Do something repeatedly..
