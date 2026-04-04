@@ -1,22 +1,22 @@
-import boto3
+# import boto3
 
-# Option 1: Use default AWS CLI credentials/profile
-s3_client = boto3.client('s3')
+# # Option 1: Use default AWS CLI credentials/profile
+# s3_client = boto3.client('s3')
 
-# Option 2: Explicitly provide credentials (not recommended for production)
-# s3_client = boto3.client(
-#     's3',
-#     aws_access_key_id="YOUR_ACCESS_KEY",
-#     aws_secret_access_key="YOUR_SECRET_KEY",
-#     region_name="ap-south-1"  # Example region
-# )
+# # Option 2: Explicitly provide credentials (not recommended for production)
+# # s3_client = boto3.client(
+# #     's3',
+# #     aws_access_key_id="YOUR_ACCESS_KEY",
+# #     aws_secret_access_key="YOUR_SECRET_KEY",
+# #     region_name="ap-south-1"  # Example region
+# # )
 
-# Fetch bucket list
-response = s3_client.list_buckets()
+# # Fetch bucket list
+# response = s3_client.list_buckets()
 
-print("Your S3 Buckets:")
-for bucket in response['Buckets']:
-    print(f" - {bucket['Name']}")
+# print("Your S3 Buckets:")
+# for bucket in response['Buckets']:
+#     print(f" - {bucket['Name']}")
 
 ###########################################
 
@@ -38,3 +38,9 @@ for bucket in response['Buckets']:
 #     print(f"Bucket '{bucket_name}' created successfully!")
 # except ClientError as e:
 #     print(f"Error: {e}")
+
+import boto3
+s3 = boto3.client("s3")
+s3.upload_file(r"C:\Users\Dhiraj\Downloads\image.png", 
+               "my-unique-bucket-name-12345-jira", 
+               "image.png")
